@@ -6,154 +6,107 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="site.css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+   
+    <link rel="stylesheet" type="text/css" href="css/static.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <style>
-       
+
     </style>
 
 </head>
 
 <body>
 
-    <ul id="menu">
-        <li data-menuanchor="page-1" class="active"><a href="#page-1">Welcome!</a></li>
-        <li data-menuanchor="page-2"><a href="#page-2">Your details</a></li>
-        <li data-menuanchor="page-3"><a href="#page-3">Macedonized</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#welcome">Welcome</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#form">Your details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="Macedonized" href="#result">Macedonized</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact us</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div id="fullpage">
-        <div class="section" id="section0">
-            <h1><span class="px-2">Welcome to the Macedonizer app</span></h1>
-            <p><span class="px-2">Start your journey, check what would be your Мacedonian name</span></p>
-
+    <div class="content">
+        <div class="section" id="welcome">
+            <div class="section-container">
+                <h1><span class="px-2">Welcome to the Macedonizer app</span></h1>
+                <p><span class="px-2">Start your journey, check what would be your Мacedonian name</span></p>
+            </div>
         </div>
 
-        <div class="section" id="section1">
-
-            <div class="px-2">
-                <h1><span>Type your details</span></h1>
-                <div id="submission-form" class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-4">
-                        </div>
-                        <div class="col-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="first-name" placeholder="First name">
+        <div class="section" id="form" style="display: none">
+            <div class="section-container">
+                <div class="px-2">
+                    <h1><span>Type your details</span></h1>
+                    <div id="submission-form" class="container">
+                        <div class="row justify-content-center">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="first-name" placeholder="First name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="last-name" placeholder="Last name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Please select your gender:</label>
+                                    <br>
+                                    <label class="radio-inline"> <input type="radio" name="gender" value="1"
+                                            checked>Female</label>
+                                    <label class="radio-inline"><input type="radio" name="gender" value="2">Male</label>
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                    <a id="btn-submit" class="btn btn-primary btn-lg disabled"
+                                        href="#result" role="button">Macedonize me!</a>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="last-name" placeholder="Last name">
-                            </div>
-                            <div class="form-group">
-                                <label>Please select your gender:</label>
-                                <br>
-                                <label class="radio-inline"> <input type="radio" name="gender" value="1"
-                                        checked>Female</label>
-                                <label class="radio-inline"><input type="radio" name="gender" value="2">Male</label>
-                            </div>
-                            <div class="form-group">
-                                <br>
-                                <a id="btn-submit" data-menuanchor="page-3" class="btn btn-primary btn-lg disabled"
-                                    href="#page-3" role="button">Macedonize
-                                    me!</a>
-                            </div>
-                        </div>
-                        <div class="col-4">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section" id="section2">
-            <div class="intro">
-                <h1>
-
-                    <span id="result" class="px-2">And it will animate down to the first section</span>
-                </h1>
+        <div class="section" id="result" style="display: none">
+            <div class="section-container">
+                <div class="intro">
+                    <h1>
+                        <span id="result" class="px-2">And it will animate down to the first section</span>
+                    </h1>
+                </div>
             </div>
-            
-            <script type="text/javascript"
-                src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-            <script type="text/javascript" src="examples.js"></script>
+        </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
+        <div class="section" id="contact-us" style="display: none">
+            <div class="section-container">
+                <div>
+                    <h1>
+                    </h1>
+                </div>
+            </div>
+        </div>
 
-            <script type="text/javascript">
-                var myFullpage = new fullpage('#fullpage', {
-                    sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                    anchors: ['page-1', 'page-2', 'page-3', '4thpage', 'lastPage'],
-                    menu: '#menu',
-                    continuousVertical: true,
-                    afterLoad: function (anchorLink, index) {
-                        //console.log("AFTER LOAD - anchorLink:" + anchorLink + " index:" + index);
-                    },
-                    onLeave: function (index, nextIndex, direction) {
-                        //console.log("ONLEAVE - index:" + index + " nextIndex:" + nextIndex + " direction:" + direction);
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
-                    },
-                });
-            </script>
-
-            <script type="text/javascript">
-
-                // Global variables
-                const minNameLength = 3;
-
-                // Reference to elements
-                const firstNameInput = document.getElementById("first-name");
-                const lastNameInput = document.getElementById("last-name");
-                const submissionButton = document.getElementById("btn-submit");
-                const resultField = document.getElementById("result");
-
-                // Attach the events to the elements
-                document.getElementById("submission-form")
-                    .addEventListener("change", onSubmissionFormChange);
-
-                // Functions
-                function onSubmissionFormChange(e) {
-
-                    if (firstNameInput.value.length >= minNameLength && lastNameInput.value.length >= minNameLength) {
-                        // Enable button
-                        submissionButton.classList.remove("disabled");
-                        macedonize();
-                    } else {
-                        // Disable the button
-                        submissionButton.classList.add("disabled");
-                        resultField.innerHTML = "";
-                    }
-
-                }
-
-                function macedonize() {
-                    var gender = document.querySelector('input[name="gender"]:checked').value;
-
-                    var macedoniaName = "Your name cannot be macedonaized";
-                    //console.log(gender);
-                    switch (gender) {
-                        case "1":
-                            macedoniaName = firstNameInput.value + "che " + lastNameInput.value + "ska";
-                            console.log(macedoniaName);
-                            break;
-                        case "2":
-                            macedoniaName = firstNameInput.value + "che " + lastNameInput.value + "ski";
-                            console.log(macedoniaName);
-
-                            break;
-                        default:
-                            break;
-                    }
-
-                    resultField.innerHTML = macedoniaName;
-                }
-            </script>
+        <script type="text/javascript" src="js/logic.js"></script>
+        <script type="text/javascript" src="js/navpage.js"></script>
 </body>
 
 </html>

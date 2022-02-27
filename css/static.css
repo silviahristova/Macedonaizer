@@ -1,0 +1,68 @@
+
+ 
+  #welcome {
+     background-image: url(../images/bg3.jpg);
+ }
+ 
+ #form {
+     background-image: linear-gradient(120deg, rgb(207, 194, 150), rgba(17, 17, 87, 0.87));
+     color: white;
+ }
+ 
+ #result {
+     background-image: linear-gradient(120deg, rgb(207, 194, 150), rgba(17, 17, 87, 0.87));
+     color: white;
+ }
+ 
+ h2 {
+     color: rgb(6, 6, 56);
+     background-color: white;
+     opacity: 0.8;
+ 
+ }
+ 
+ h1 span {
+     color: rgb(6, 6, 56);
+     opacity: 0.8;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ 
+ p span {
+     color: rgb(6, 6, 56);
+     opacity: 0.8;
+ }
+ 
+ .radio-inline {
+     color: rgb(6, 6, 56);
+     background-color: rgba(163, 180, 219, 0.808);
+     opacity: 0.8;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ 
+ #btn-submit {
+    color: rgb(4, 4, 39);
+    background-color: rgba(163, 180, 219, 0.808);
+ }
+ 
+/* page layout */
+.section {
+    height: calc(100vh - 56px);  /* remove nav height */
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+}
+
+ .section-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f8f9fa;
+    border-radius: 13px;
+    min-width: 500px;
+    min-height: 300px;
+    text-align: center;
+}
+
